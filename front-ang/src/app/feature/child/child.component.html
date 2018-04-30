@@ -1,0 +1,14 @@
+<mat-card>
+  <mat-card-title>
+    ID: {{position.id}}
+  </mat-card-title>
+
+  <mat-card-content>
+    Summe: {{position.amount|currency:'EUR'}}
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button (click)="details()">
+      Details
+    </button>
+  </mat-card-actions>
+</mat-card>

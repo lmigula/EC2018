@@ -1,0 +1,45 @@
+<mat-card>
+  <mat-card-header>
+    Data-Binding
+  </mat-card-header>
+  <mat-card-content>
+    <mat-form-field class="example-full-width">
+      <input matInput [(ngModel)]="name" placeholder="name">
+    </mat-form-field>
+    <div>Name: {{ name }}</div>
+    <mat-form-field class="example-full-width">
+      <input matInput [value]="name" placeholder="name">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput [value]="name" placeholder="revert Name" (input)="listen($event.target.value)">
+    </mat-form-field>
+    <div>
+      {{revName}}
+    </div>
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-header>
+    Conditional
+  </mat-card-header>
+  <mat-card-content>
+    <div>
+      <mat-checkbox [(ngModel)]="checked">*ngIf</mat-checkbox>
+
+      <mat-card *ngIf="checked">*ngIf</mat-card>
+
+    </div>
+    <div>
+      <mat-checkbox [(ngModel)]="ifElse">if else</mat-checkbox>
+
+      <div *ngIf="ifElse; else elseBlock">
+
+        <mat-card>if</mat-card>
+      </div>
+      <ng-template #elseBlock>
+        <mat-card>else</mat-card>
+      </ng-template>
+    </div>
+  </mat-card-content>
+</mat-card>

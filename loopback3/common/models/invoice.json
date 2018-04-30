@@ -1,0 +1,30 @@
+{
+  "name": "invoice",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "amount": {
+      "type": "number"
+    },
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "customer": {
+      "type": "string",
+      "required": true
+    },
+    "position": {
+      "type": [
+        "object"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

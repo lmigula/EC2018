@@ -1,0 +1,11 @@
+{
+    "db": {
+        "url": "http://192.168.0.40:5984",
+        "database": "ec-invoice",
+        "username": "",
+        "password": "",
+        "name": "couchDB",
+        "modelIndex": "",
+        "connector": "couchdb"
+    }
+}

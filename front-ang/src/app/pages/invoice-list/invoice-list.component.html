@@ -1,0 +1,19 @@
+<mat-card>
+  <button mat-raised-button routerLink="/invoiceDetail">neue Rechnung</button>
+  <mat-card-content>
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-header>
+    Rechnungen
+  </mat-card-header>
+  <mat-card-content>
+    <mat-list *ngIf="list">
+      <app-position [position]="entry" (showDetails)="showDetails($event)" *ngFor="let entry of list">
+      </app-position>
+
+    </mat-list>
+
+  </mat-card-content>
+</mat-card>

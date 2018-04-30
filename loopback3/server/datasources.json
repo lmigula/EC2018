@@ -1,0 +1,24 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "couchDB": {
+    "url": "http://localhost:5984",
+    "database": "ec-invoice",
+    "username": "",
+    "password": "",
+    "name": "couchDB",
+    "modelIndex": "",
+    "connector": "couchdb"
+  },
+  "ecTest": {
+    "url": "http://localhost:5984",
+    "database": "ec-test",
+    "username": "",
+    "password": "",
+    "name": "ecTest",
+    "modelIndex": "",
+    "connector": "couchDB"
+  }
+}

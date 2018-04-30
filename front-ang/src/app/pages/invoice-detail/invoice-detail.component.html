@@ -1,0 +1,98 @@
+<mat-card>
+  <mat-card-title>
+    Rechnung
+  </mat-card-title>
+  <mat-card-subtitle>
+    Info
+  </mat-card-subtitle>
+  <mat-card-content>
+    <div class="input-row">
+      <div fxFlex>
+        <mat-form-field class="date">
+          <input matInput type="date" placeholder="Datum" [ngModel]="invoice.date | date:'yyyy-MM-dd'" (ngModelChange)="invoice.date = $event">
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="input-row">
+      <mat-form-field fxFlex>
+        <input matInput type="text" [(ngModel)]="invoice.customer" placeholder="Kunde">
+      </mat-form-field>
+
+    </div>
+
+  </mat-card-content>
+
+</mat-card>
+
+
+<mat-card>
+  <mat-card-title>
+    Positionen
+  </mat-card-title>
+  <mat-card-content>
+    <mat-table #table [dataSource]="dataSource">
+
+
+
+      <ng-container matColumnDef="description">
+        <mat-header-cell *matHeaderCellDef>Bezeichnung</mat-header-cell>
+        <mat-cell *matCellDef="let element">
+
+          <input matInput [(ngModel)]="element.description" type="text" placeholder="Beschreibung" />
+        </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="amount">
+        <mat-header-cell *matHeaderCellDef>Menge</mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          <input matInput [(ngModel)]="element.amount" type="number" placeholder="Menge" />
+
+        </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="singlePrice">
+        <mat-header-cell *matHeaderCellDef>Einzelpreis</mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          <input matInput [(ngModel)]="element.singlePrice" type="number" placeholder="Preis" />
+        </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="delete">
+        <mat-header-cell *matHeaderCellDef></mat-header-cell>
+        <mat-cell *matCellDef="let element; let rIndex = index;">
+          <button mat-icon-button (click)="deletePosition(element,rIndex)">
+            <mat-icon aria-label="Artikel entfernen">delete</mat-icon>
+          </button>
+        </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="sum">
+        <mat-header-cell *matHeaderCellDef>Summe</mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          {{element.amount * element.singlePrice |currency:'EUR'}}
+        </mat-cell>
+      </ng-container>
+      <mat-header-row *matHeaderRowDef=" displayedColumns "></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+    <div fxLayout="row">
+      <div fxFlex>Summe</div>
+      <div fxFlex>{{getSum()}}</div>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button (click)="addPosition()">Position hinzufügen</button>
+  </mat-card-actions>
+</mat-card>
+
+<mat-card>
+  <mat-card-title>
+    Aktionen
+  </mat-card-title>
+  <mat-card-content>
+
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button (click)="save()">speichern</button>
+    <button mat-raised-button (click)="getPdf()">pdf speichern</button>
+  </mat-card-actions>
+</mat-card>

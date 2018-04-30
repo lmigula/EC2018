@@ -1,0 +1,15 @@
+<mat-list-item class="posItem">
+  <h3 matLine> {{position.value.customer}} </h3>
+  <div matLine>
+    Summe: {{position.value.amount| currency:'EUR'}}
+  </div>
+  <div matLine>
+    Datum: {{position.value.date| date:'dd.MM.yyyy'}}
+  </div>
+
+  <button mat-raised-button routerLink="/invoiceDetail/{{position.id}}">
+    Details
+  </button>
+
+
+</mat-list-item>

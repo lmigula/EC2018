@@ -1,0 +1,262 @@
+{
+    "name": "Dummy Template for Test",
+    "version": "1.0.0",
+    "debug": false,
+    "header": {
+        "font": {
+            "name": "./test/fonts/arial.ttf",
+            "size": 8,
+            "color": "#808080"
+        },
+        "format": {
+            "align": "center",
+            "height": 30,
+            "textmargin": {
+                "top": 15
+            }
+        },
+        "data": "Demo Rechnung"
+    },
+    "footer": {
+        "font": {
+            "name": "./test/fonts/arial.ttf",
+            "size": 6,
+            "color": "#808080"
+        },
+        "format": {
+            "align": "center",
+            "height": 30,
+            "textmargin": {
+                "left": 10,
+                "right": 10
+            },
+            "background": "#FFFFFF"
+        },
+        "data": [
+            [
+                {
+                    "text": "",
+                    "align": "left",
+                    "font": {
+                        "color": "#000000",
+                        "size": 8,
+                        "name": "./test/fonts/arialbd.ttf"
+                    }
+                },
+                {
+                    "text": "",
+                    "align": "left",
+                    "font": {
+                        "color": "#000000",
+                        "size": 8,
+                        "name": "./test/fonts/arialbd.ttf"
+                    }
+                },
+                {
+                    "text": "",
+                    "align": "left",
+                    "font": {
+                        "color": "#000000",
+                        "size": 10,
+                        "name": "./test/fonts/arialbd.ttf"
+                    }
+                }
+            ],
+            [
+                "",
+                "",
+                ""
+            ]
+        ]
+    },
+    "options": {
+        "pages": [
+            {
+                "layout": {
+                    "size": "A4",
+                    "layout": "portrait",
+                    "margins": {
+                        "top": 0,
+                        "left": 0,
+                        "bottom": 0,
+                        "right": 0
+                    }
+                },
+                "background": {
+                    "filename": "./images/background.png",
+                    "imageformat": {
+                        "fit": [
+                            595.28,
+                            841.89
+                        ]
+                    }
+                },
+                "sections": {
+                    "personData": {
+                        "font": {
+                            "name": "./test/fonts/arial.ttf",
+                            "size": 10,
+                            "color": "#000000"
+                        },
+                        "format": {
+                            "align": "left",
+                            "left": 420,
+                            "top": 50,
+                            "width": 150,
+                            "height": 110
+                        }
+                    },
+                    "list": {
+                        "font": {
+                            "name": "./test/fonts/arial.ttf",
+                            "size": 10,
+                            "color": "#000000"
+                        },
+                        "format": {
+                            "align": "left",
+                            "left": 70,
+                            "top": 160,
+                            "width": 290,
+                            "height": 110
+                        }
+                    },
+                    "linebreak": {
+                        "font": {
+                            "name": "./test/fonts/arial.ttf",
+                            "size": 12,
+                            "color": "#000000"
+                        },
+                        "format": {
+                            "align": "left",
+                            "left": 360,
+                            "top": 160,
+                            "width": 191,
+                            "height": 110
+                        }
+                    },
+                    "toosmall": {
+                        "font": {
+                            "name": "./test/fonts/arial.ttf",
+                            "size": 10,
+                            "color": "#000000"
+                        },
+                        "format": {
+                            "align": "right",
+                            "left": 70,
+                            "top": 270,
+                            "width": 200,
+                            "height": 20
+                        }
+                    },
+                    "date": {
+                        "font": {
+                            "name": "./test/fonts/arial.ttf",
+                            "size": 10,
+                            "color": "#000000"
+                        },
+                        "format": {
+                            "align": "right",
+                            "left": 280,
+                            "top": 270,
+                            "width": 271,
+                            "height": 23
+                        }
+                    },
+                    "subject": {
+                        "font": {
+                            "name": "./test/fonts/arialbd.ttf",
+                            "size": 11,
+                            "color": "#000000"
+                        },
+                        "format": {
+                            "align": "left",
+                            "left": 70,
+                            "top": 295,
+                            "width": 481,
+                            "height": 55
+                        }
+                    },
+                    "content": {
+                        "font": {
+                            "name": "./test/fonts/arial.ttf",
+                            "size": 10,
+                            "color": "#000000"
+                        },
+                        "format": {
+                            "align": "left",
+                            "left": 70,
+                            "top": 150,
+                            "width": 531,
+                            "height": 550
+                        }
+                    },
+                    "signTable": {
+                        "font": {
+                            "name": "./test/fonts/arial.ttf",
+                            "size": 8,
+                            "color": "#000000"
+                        },
+                        "format": {
+                            "align": "left",
+                            "left": 350,
+                            "top": 700,
+                            "width": 210,
+                            "height": 70
+                        }
+                    }
+                }
+            },
+            {
+                "layout": {
+                    "size": "A4",
+                    "layout": "portrait",
+                    "margins": {
+                        "top": 0,
+                        "left": 0,
+                        "bottom": 0,
+                        "right": 0
+                    }
+                },
+                "background": {
+                    "filename": "./images/background.png",
+                    "imageformat": {
+                        "fit": [
+                            595.28,
+                            841.89
+                        ]
+                    }
+                },
+                "sections": {
+                    "area50": {
+                        "font": {
+                            "name": "./test/fonts/arial.ttf",
+                            "size": 12,
+                            "color": "#000000"
+                        },
+                        "format": {
+                            "align": "center",
+                            "left": 70,
+                            "top": 20,
+                            "width": 481,
+                            "height": 100
+                        }
+                    },
+                    "area51": {
+                        "font": {
+                            "name": "./test/fonts/arial.ttf",
+                            "size": 12,
+                            "color": "#000000"
+                        },
+                        "format": {
+                            "align": "justify",
+                            "left": 70,
+                            "top": 140,
+                            "width": 481,
+                            "height": 630
+                        }
+                    }
+                }
+            }
+        ]
+    }
+}

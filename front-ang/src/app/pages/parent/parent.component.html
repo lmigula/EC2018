@@ -1,0 +1,15 @@
+<mat-card *ngIf="data">
+  <mat-card-title>
+    Data
+  </mat-card-title>
+
+  <mat-card-content>
+    {{data}}
+  </mat-card-content>
+
+</mat-card>
+
+<div *ngFor="let entry of list">
+
+  <app-child [position]="entry" (showDetailsComp)="showDetailsParent($event)"></app-child>
+</div>
